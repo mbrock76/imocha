@@ -4,7 +4,6 @@ import java.lang.Math;
 
 public class Main{
     public static int medicineOfPatients(int N,int[] med){
-        
         //this is default OUTPUT. You can change it.
         int result = 0;
         int singles = 0;
@@ -17,23 +16,24 @@ public class Main{
             int tempDubs = 0;
 
             while(temp != 0){
-                
+
                 if(temp % 2 != 0){
+                    
                     singles++;
                     temp--;
                 }else{
+                    
                     tempDubs++;
                     temp = temp/2;
                 }
             }
-            
+
             if(tempDubs > doubles){
                 doubles = tempDubs;
-            }
+            }            
         }
-        
-        result = singles + doubles;
 
+        result = singles + doubles;
         return result;
     }
 

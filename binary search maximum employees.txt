@@ -32,24 +32,25 @@ public class Test
         return result;
     }
 
-    public static void Main()
-    {
-        // INPUT [uncomment & modify if required]
-        int N = Convert.ToInt32(Console.ReadLine());
-        
-        int i;
-        int[] A = new int[N];
-        int[] B = new int[N];
-        int[] C = new int[N];
-        for(i=0;i<N;i++)
-        {
-            string[] tokens = Console.ReadLine().Split(' ');
-            A[i] = int.Parse(tokens[0]);
-            B[i] = int.Parse(tokens[1]);
-            C[i] = int.Parse(tokens[2]);
-        }
-        
-        // OUTPUT [uncomment & modify if required]
-        Console.WriteLine(maximumNumberOfParticipants(N,A,B,C));
+    public static void main (String[]args){
+		Scanner sc = new Scanner (System.in);
+
+		//INPUT [uncomment & modify if required]
+		int N = sc.nextInt ();
+		
+		int A[] = new int[N];
+		int B[] = new int[N];
+		int C[] = new int[N];
+		for(int i=0;i<N;i++)
+		{
+			A[i] = sc.nextInt(); 
+			B[i] = sc.nextInt();
+			C[i] = sc.nextInt();
+		}
+
+		sc.close ();
+
+		//OUTPUT [uncomment & modify if required]
+		System.out.print(maximumNumberOfParticipants(N,A,B,C));
     }
 }
