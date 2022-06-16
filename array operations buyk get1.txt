@@ -10,17 +10,19 @@ public class Main
         //this is default OUTPUT. You can change it.
         int result = 0;
         Arrays.sort(A);
+        Integer[] temp = Arrays.stream(A).boxed().toArray(Integer[]::new);
+        Arrays.sort(temp, Collections.reverseOrder());
 
         //write your Logic here:
-        for(int i = N-1, j = 0; i >= 0; i--){
-            System.out.println("i: " + i + "\tj: " + j + "\tA[i]" + A[i]);
+        for(int i = 0, j = 0; i < N; i++){
+            
             if(j == K){
-                i--;
+                i++;
                 j = 0;
             }
             
-            if(i >= 0){
-                result += A[i];
+            if(i < N){
+                result += temp[i];
                 j++;
             }
         }
