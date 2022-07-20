@@ -10,10 +10,9 @@ public class Main
     //this is default OUTPUT. You can change it.
     int result = 0;
 
-    for(int i = 0; i < N; i++){
-        result += A[i]%10;
+    for(int each:A){
+        result += each%10;
     }
-
 
     return result;
   }
